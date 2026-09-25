@@ -1,0 +1,301 @@
+/* ==============================
+   RESET E IMPOSTAZIONI GENERALI
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f7f4ef;
+    color: #2b2b2b;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+header {
+    min-height: 420px;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)
+        ),
+        linear-gradient(135deg, #8b1e1e, #d35400);
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 21px;
+    color: #f5f5f5;
+    max-width: 600px;
+}
+
+
+/* ==============================
+   CONTENUTO PRINCIPALE
+   ============================== */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+
+/* ==============================
+   SEZIONI
+   ============================== */
+
+section {
+    background: #ffffff;
+    padding: 40px;
+    margin-bottom: 35px;
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+    color: #a52a2a;
+    font-size: 32px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    background: #e5a623;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+section > p {
+    font-size: 17px;
+    color: #555;
+}
+
+
+/* ==============================
+   MENU
+   ============================== */
+
+#menu {
+    background: #fff;
+}
+
+.pizza {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    transition: padding 0.2s ease;
+}
+
+.pizza:last-child {
+    border-bottom: none;
+}
+
+.pizza:hover {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.pizza h3 {
+    color: #292929;
+    font-size: 21px;
+    margin-bottom: 4px;
+}
+
+.pizza p {
+    color: #777;
+    font-size: 15px;
+}
+
+.pizza strong {
+    color: #a52a2a;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+
+/* ==============================
+   CONTATTI
+   ============================== */
+
+#contatti p {
+    background: #f8f5ef;
+    padding: 14px 18px;
+    margin: 10px 0;
+    border-left: 4px solid #a52a2a;
+    border-radius: 5px;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    background: #202020;
+    color: #ddd;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+/* ==============================
+   ANIMAZIONI
+   ============================== */
+
+header h1 {
+    animation: comparsa 1s ease;
+}
+
+header p {
+    animation: comparsa 1.3s ease;
+}
+
+@keyframes comparsa {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==============================
+   RESPONSIVE - TABLET
+   ============================== */
+
+@media (max-width: 768px) {
+
+    header {
+        min-height: 350px;
+    }
+
+    header h1 {
+        font-size: 42px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    main {
+        width: 92%;
+        margin: 40px auto;
+    }
+
+    section {
+        padding: 30px 25px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+
+/* ==============================
+   RESPONSIVE - SMARTPHONE
+   ============================== */
+
+@media (max-width: 550px) {
+
+    header {
+        min-height: 300px;
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    main {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    section {
+        padding: 25px 20px;
+        border-radius: 12px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .pizza {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .pizza h3 {
+        font-size: 18px;
+    }
+
+    .pizza p {
+        font-size: 14px;
+    }
+
+    .pizza strong {
+        font-size: 17px;
+    }
+}
